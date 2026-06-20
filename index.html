@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Layout Practice | HTML & CSS Fundamentals</title>
+    <meta name="description"
+        content="A visual demonstration of core HTML and CSS layout skills including Flexbox, Grid, Positioning, and the Box Model.">
+    <!-- Google Fonts: Inter and Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container flex-center">
+            <h1>Frontend Layout Practice</h1>
+            <p class="subtitle">HTML and CSS fundamentals project</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Flexbox layout -->
+        <section id="flexbox" class="skill-section">
+            <div class="container">
+                <div class="section-info">
+                    <span class="badge">Skill 01</span>
+                    <h2>Flexbox Multi Section Layout</h2>
+                    <p class="explanation">
+                        Flexbox (Flexible Box Layout) is a one-dimensional layout model that makes it easy to align
+                        items in a row or column. It handles distribution of space between items and provides powerful
+                        alignment capabilities, even when their size is unknown or dynamic.
+                    </p>
+                </div>
+
+                <div class="practical-block">
+                    <p class="practice-label">Practical Example: Flexbox Navbar & Card Row</p>
+
+                    <!-- Navbar Example -->
+                    <nav class="flex-nav">
+                        <div class="nav-logo">Dev<span>Lab</span></div>
+                        <ul class="nav-menu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#" class="nav-cta">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- Card Row Example -->
+                    <div class="flex-row">
+                        <div class="flex-card">
+                            <div class="card-icon">🚀</div>
+                            <h3>Velocity</h3>
+                            <p>Fast and efficient layout rendering.</p>
+                        </div>
+                        <div class="flex-card">
+                            <div class="card-icon">🧩</div>
+                            <h3>Modular</h3>
+                            <p>Components that fit together perfectly.</p>
+                        </div>
+                        <div class="flex-card">
+                            <div class="card-icon">⚡</div>
+                            <h3>Dynamic</h3>
+                            <p>Adapts to content size changes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Positioning -->
+        <section id="positioning" class="skill-section alt-bg">
+            <div class="container">
+                <div class="section-info">
+                    <span class="badge">Skill 02</span>
+                    <h2>Absolute vs Relative Positioning</h2>
+                    <p class="explanation">
+                        The CSS <code>position</code> property defines how an element is placed in the document.
+                        <code>relative</code> keeps an element in the normal flow but allows it to act as a reference
+                        point for <code>absolute</code> children, which are removed from the flow and positioned
+                        relative to the nearest positioned ancestor.
+                    </p>
+                </div>
+
+                <div class="practical-block">
+                    <p class="practice-label">Practical Example: Relative Container with Absolute Badges</p>
+                    <div class="position-demo-container">
+                        <div class="relative-card">
+                            <span class="abs-badge">Featured</span>
+                            <div class="card-image-placeholder">
+                                <div class="glass-orb"></div>
+                            </div>
+                            <div class="card-body">
+                                <h3>Modern UI Component</h3>
+                                <p>This card uses relative positioning, while the "Featured" badge is positioned
+                                    absolutely at the top-right corner.</p>
+                                <span class="abs-price-tag">$49</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Box model -->
+        <section id="box-model" class="skill-section">
+            <div class="container">
+                <div class="section-info">
+                    <span class="badge">Skill 03</span>
+                    <h2>Margin, Padding, and Box Model</h2>
+                    <p class="explanation">
+                        The CSS Box Model is the foundation of design and layout. Every element is a rectangular box
+                        consisting of Content, Padding (space inside the border), Border, and Margin (space outside the
+                        border). Understanding these allows precise control over element spacing.
+                    </p>
+                </div>
+
+                <div class="practical-block">
+                    <p class="practice-label">Practical Example: Spacing Control Comparison</p>
+                    <div class="box-model-row">
+                        <div class="box-example box-1">
+                            <div class="box-content">
+                                <h4>Compact Box</h4>
+                                <p>Small padding, no margin.</p>
+                            </div>
+                        </div>
+                        <div class="box-example box-2">
+                            <div class="box-content">
+                                <h4>Spacious Box</h4>
+                                <p>Large padding and large margin.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-legend">
+                        <div class="legend-item"><span class="color-dot margin"></span> Margin</div>
+                        <div class="legend-item"><span class="color-dot border"></span> Border</div>
+                        <div class="legend-item"><span class="color-dot padding"></span> Padding</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: CSS Grid -->
+        <section id="grid" class="skill-section alt-bg">
+            <div class="container">
+                <div class="section-info">
+                    <span class="badge">Skill 04</span>
+                    <h2>Responsive Grid Layout</h2>
+                    <p class="explanation">
+                        CSS Grid Layout is a two-dimensional layout system that handles both rows and columns. It's
+                        powerful for creating complex layouts without needing floats or positioning. Using
+                        <code>grid-template-columns</code> and media queries, we can create truly fluid responsive
+                        designs.
+                    </p>
+                </div>
+
+                <div class="practical-block">
+                    <p class="practice-label">Practical Example: Responsive Image Gallery</p>
+                    <div class="grid-layout">
+                        <div class="grid-item">
+                            <div class="grid-img">1</div>
+                            <div class="grid-text">Desktop: 4 Columns</div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="grid-img">2</div>
+                            <div class="grid-text">Tablet: 2 Columns</div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="grid-img">3</div>
+                            <div class="grid-text">Mobile: 1 Column</div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="grid-img">4</div>
+                            <div class="grid-text">Fully Responsive</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2026 Layout Demo Project | Designed with Modern CSS</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
